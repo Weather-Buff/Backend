@@ -33,4 +33,4 @@ jobs:
         GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
         GITHUB_INSTALLATION_ID: ${{ secrets.GITHUB_INSTALLATION_ID }}
         GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
-      run: python -m cron/scrape_and_upload.py
+      run: python -m cron.scrape_and_upload.py
