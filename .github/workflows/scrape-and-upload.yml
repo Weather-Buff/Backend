@@ -32,5 +32,5 @@ jobs:
       env:
         GH_APP_ID: ${{ secrets.GH_APP_ID }}
         GH_INSTALLATION_ID: ${{ secrets.GH_INSTALLATION_ID }}
-        GH_APP_PRIVATE_KEY: ${{ secrets.GH_PRIV_KEY }}
+        GH_PRIV_KEY: ${{ secrets.GH_PRIV_KEY }}
       run: python -m cron.scrape_and_upload.py
