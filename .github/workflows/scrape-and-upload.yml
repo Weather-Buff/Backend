@@ -30,7 +30,7 @@ jobs:
 
     - name: Run the Python script
       env:
-        GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
-        GITHUB_INSTALLATION_ID: ${{ secrets.GITHUB_INSTALLATION_ID }}
-        GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
+        GH_APP_ID: ${{ secrets.GITHUB_APP_ID }}
+        GH_INSTALLATION_ID: ${{ secrets.GITHUB_INSTALLATION_ID }}
+        GH_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
       run: python -m cron.scrape_and_upload.py
