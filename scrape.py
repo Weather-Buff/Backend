@@ -25,7 +25,7 @@ def scrape() -> list[Facility]:
         }
     )
 
-    soup = BeautifulSoup(response.text, "lxml")
+    soup = BeautifulSoup(response.text, "html.parser")
     blocks = soup.find_all("div", class_ = "col-md-3 col-sm-6")
 
     for data in blocks:
