@@ -7,12 +7,18 @@ import requests
 
 
 def get_github_key() -> str:
-    decoded_key = base64.b64decode(os.getenv("GH_PRIVATE_KEY")).decode()
+    b64 = os.getenv("GH_PRIV_KEY")
+
+    print(b64)
+
+    decoded_key = base64.b64decode(b64).decode()
+
+    print(decoded_key)
 
     payload = {
         'iat': int(time.time()),
-        'exp': int(time.time()) + 60 * 10,
-        'iss': os.getenv("GH_APP_NAME")
+        'exp': int(time.time()) + 600,
+        'iss': os.getenv("GH_APP_CLIENT_ID")
     }
 
     return jwt.encode(payload, decoded_key, algorithm='RS256')
