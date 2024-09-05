@@ -9,8 +9,6 @@ import requests
 def get_github_key() -> str:
     b64 = os.getenv("GH_PRIV_KEY")
 
-    print(b64)
-
     decoded_key = base64.b64decode(b64).decode()
 
     print(decoded_key)

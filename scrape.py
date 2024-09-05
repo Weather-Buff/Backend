@@ -48,6 +48,3 @@ def scrape() -> list[Facility]:
                 facilities.append(facility)
 
     return facilities
-
-for f in scrape():
-    print(f.to_dict())

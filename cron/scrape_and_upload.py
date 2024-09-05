@@ -9,9 +9,6 @@ from github.InputGitTreeElement import InputGitTreeElement
 
 import cron.utils as utils
 
-# Load environment variables
-load_dotenv(find_dotenv("dev.env", True), verbose=True)
-
 # Create a timestamp for the CSV file
 running_at = datetime.now()
 csv_name = f"facilities_{running_at.strftime('%Y%m%d_%H%M%S')}.csv"
