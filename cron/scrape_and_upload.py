@@ -2,7 +2,6 @@ import csv
 import io
 from datetime import datetime
 from scrape import scrape
-from dotenv import load_dotenv, find_dotenv
 
 from github import Github
 from github.InputGitTreeElement import InputGitTreeElement
